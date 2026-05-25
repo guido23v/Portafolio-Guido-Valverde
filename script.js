@@ -10,39 +10,36 @@ function obtenerValores() {
     return { num1, num2 };
 }
 
-function sumar() {
-    let datos = obtenerValores();
-    if (!datos) return;
-
-    document.getElementById("resultado").innerText =
-        datos.num1 + datos.num2;
+function mostrarResultado(valor){
+    document.getElementById("resultado").innerText = valor;
 }
 
-function restar() {
-    let datos = obtenerValores();
-    if (!datos) return;
-
-    document.getElementById("resultado").innerText =
-        datos.num1 - datos.num2;
+function sumar(){
+    let d = obtenerValores();
+    if(!d) return;
+    mostrarResultado(d.num1 + d.num2);
 }
 
-function multiplicar() {
-    let datos = obtenerValores();
-    if (!datos) return;
-
-    document.getElementById("resultado").innerText =
-        datos.num1 * datos.num2;
+function restar(){
+    let d = obtenerValores();
+    if(!d) return;
+    mostrarResultado(d.num1 - d.num2);
 }
 
-function dividir() {
-    let datos = obtenerValores();
-    if (!datos) return;
+function multiplicar(){
+    let d = obtenerValores();
+    if(!d) return;
+    mostrarResultado(d.num1 * d.num2);
+}
 
-    if (datos.num2 === 0) {
+function dividir(){
+    let d = obtenerValores();
+    if(!d) return;
+
+    if(d.num2 === 0){
         alert("No se puede dividir para cero");
         return;
     }
 
-    document.getElementById("resultado").innerText =
-        datos.num1 / datos.num2;
+    mostrarResultado((d.num1 / d.num2).toFixed(2));
 }

@@ -3,44 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Página Personal</title>
+    <title>Página Personal - Guido Rea</title>
     <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
-    <div class="contenedor">
+    <div class="container">
 
-        <header>
-            <h1>Mi Página Personal</h1>
-        </header>
+        <div class="profile-card">
+            <div class="header">
+                <div class="avatar">
+                    <i class="fas fa-user-tie"></i>
+                </div>
 
-        <section class="perfil">
-            <h2>Información Personal</h2>
+                <h1>Guido Fernando Rea Valverde</h1>
+                <p>Militar en Servicio Pasivo</p>
+            </div>
 
-            <p><strong>Nombre:</strong> Guido Fernando Rea Valverde</p>
-            <p><strong>Cédula:</strong> 0502727423</p>
-            <p><strong>Edad:</strong> 44 años</p>
-            <p><strong>Fecha de nacimiento:</strong> 03 de agosto de 1981</p>
-            <p><strong>Profesión:</strong> Militar en servicio pasivo</p>
-            <p><strong>Trabajo actual:</strong> Centro de capacitación al personal.</p>
-        </section>
+            <div class="info">
+                <h2>Información Personal</h2>
 
-        <section class="calculadora">
-            <h2>Calculadora Básica</h2>
+                <div class="info-item">
+                    <i class="fas fa-id-card"></i>
+                    <span>C.I. 0502727423</span>
+                </div>
+
+                <div class="info-item">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>03 de agosto de 1981</span>
+                </div>
+
+                <div class="info-item">
+                    <i class="fas fa-user"></i>
+                    <span>44 años</span>
+                </div>
+
+                <div class="info-item">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Centro de Capacitación al Personal</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="calculator-card">
+            <h2>
+                <i class="fas fa-calculator"></i>
+                Calculadora Básica
+            </h2>
 
             <input type="number" id="num1" placeholder="Ingrese el primer número">
             <input type="number" id="num2" placeholder="Ingrese el segundo número">
 
-            <div class="botones">
-                <button onclick="sumar()">Sumar</button>
-                <button onclick="restar()">Restar</button>
-                <button onclick="multiplicar()">Multiplicar</button>
-                <button onclick="dividir()">Dividir</button>
+            <div class="buttons">
+                <button onclick="sumar()">+</button>
+                <button onclick="restar()">−</button>
+                <button onclick="multiplicar()">×</button>
+                <button onclick="dividir()">÷</button>
             </div>
 
-            <h3>Resultado:</h3>
-            <p id="resultado">0</p>
-        </section>
+            <div class="result-box">
+                <h3>Resultado</h3>
+                <p id="resultado">0</p>
+            </div>
+        </div>
 
     </div>
 
